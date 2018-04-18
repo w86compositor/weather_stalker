@@ -64,40 +64,83 @@ h1, h2, h3, h5, p {
   }
 
   /* The icons depending on the weather */
-  /* CLOUDY */
-.cloudy {
-	animation: cloudy 5s ease-in-out infinite;
-	background: #FFFFFF;
-	border-radius: 50%;
-	box-shadow: 
-		#FFFFFF 65px -15px 0 -5px, 
-		#FFFFFF 25px -25px, 
-		#FFFFFF 30px 10px, 
-		#FFFFFF 60px 15px 0 -10px, 
-		#FFFFFF 85px 5px 0 -5px;
-	height: 50px;
-	width: 50px; 
-	margin-left: -60px;
-	position: absolute;
-	left: 255px;
-	top: 70px; 
+  .sun-rays {
+    position: absolute;
+    bottom: 2em;
+    right: 18em;
+    height: 15em;
+    width: 15em;
+    z-index: 999999;
+    background: radial-gradient(rgba(255, 237, 175, .8) 50%, rgba(255, 237, 175, .2) 70%);
+    border-radius: 50%;
+    box-shadow: 0 0 .5em rgba(255, 237, 175, 1);
+    -webkit-animation: rays 10s infinite;
+    -moz-animation: rays 10s infinite;
+    animation: rays 10s infinite;
+    }
+    .sun {
+    position: absolute;
+    bottom: 4.5em;
+    right: 20.5em;
+    height: 10em;
+    width: 10em;
+    z-index: -5;
+    background: rgba(255, 237, 175, 1);
+    border-radius: 50%;
+    box-shadow: 0 0 1em rgba(255, 237, 175, .5), inset 0 0 .5em #FFFFAD;
+    }
+
+    /*Sun Animation*/
+@-webkit-keyframes rays {
+  0% {
+      transform: scale(1.1);
+  }
+  25% {
+      transform: scale(0.9);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  75% {
+      transform: scale(0.9);
+  }
+  100% {
+      transform: scale(1.1);
+  }
 }
-.cloudy:after {
-	animation: cloudy_shadow 5s ease-in-out infinite;
-	background: #000000;
-	border-radius: 50%;
-	content: '';
-	height: 15px;
-	width: 120px;
-	opacity: 0.2;
-	position: absolute;
-	left: 5px; 
-	bottom: -60px;
-  transform: scale(1);
+
+@-moz-keyframes rays {
+  0% {
+      transform: scale(1.1);
+  }
+  25% {
+      transform: scale(0.9);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  75% {
+      transform: scale(0.9);
+  }
+  100% {
+      transform: scale(1.1);
+  }
 }
-@keyframes cloudy {
-	50% { transform: translateY(-20px); }
-}
-@keyframes cloudy_shadow {
-	50% { transform: translateY(20px) scale(.7); opacity:.05; }
+
+@keyframes rays {
+  0% {
+      transform: scale(1.1);
+  }
+  25% {
+      transform: scale(0.9);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  75% {
+      transform: scale(0.9);
+  }
+  100% {
+      transform: scale(1.1);
+  }
 }

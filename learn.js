@@ -25,7 +25,7 @@ $(document).ready(function () {
              $("#country").html(resp.sys.country);
              $("h2.celcius").html(Math.floor(resp.main.temp) + String.fromCharCode(176) + tempCel)
              $("#desc").html(resp.weather[0].description);
-             $("#icon").append('<img src= "' + resp.weather[0].icon + '">');
+            //  $("#icon").append('<img src= "' + resp.weather[0].icon + '">');
 
             // Adding an event listener to toggle between celcius and fahrenheit
             $("span.slider").on("click", function() {
@@ -47,7 +47,7 @@ $(document).ready(function () {
             let checkWeatherDesc = $("span#desc").html();
             switch(checkWeatherDesc){
               case "clear sky":
-              console.log("We got it");
+              console.log("Shiny day");
               break;
               
               case "few clouds":
@@ -82,13 +82,6 @@ $(document).ready(function () {
               console.log("mist mister");
               break;
             }
-
-
-
-
-
-
-
           }//closing xhttp if statement
        }; // closing xhttp callback function
           xhttp.open("GET", `${askLoc}`, true);
