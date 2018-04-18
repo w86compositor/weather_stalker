@@ -45,7 +45,12 @@ $(document).ready(function () {
 
             //check the weather description to display cool css animations
             let checkWeatherDesc = $("span#desc").html();
-            console.log(checkWeatherDesc);
+            switch(checkWeatherDesc){
+              case "clear sky":
+              console.log("We got it");
+              break;
+              
+            }
 
 
 
