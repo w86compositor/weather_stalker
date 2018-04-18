@@ -50,6 +50,37 @@ $(document).ready(function () {
               console.log("We got it");
               break;
               
+              case "few clouds":
+              console.log("just a few clouds");
+              break;
+              
+              case "scattered clouds":
+              console.log("scatt clouds");
+              break;
+
+              case "broken clouds":
+              console.log("broken clouds");
+              break;
+
+              case "shower rain":
+              console.log("shower rain");
+              break;
+
+              case "rain":
+              console.log("it's pouring dude");
+              break;
+
+              case "thunderstorm":
+              console.log("it's going crazy");
+              break;
+
+              case "snow":
+              console.log("freezing it's snowing");
+              break;
+
+              case "mist":
+              console.log("mist mister");
+              break;
             }
 
 
