@@ -1,5 +1,12 @@
 body {
-    background: #333;
+  background: linear-gradient(to bottom, #B9DFFF, #4BA0DB, #004390);
+  overflow: hidden;
+  display: grid;
+  top: 0;
+  left: 0;
+  min-height: 70em;
+  max-height: 70em;
+  width: 100%;
 }
 
 h1, h2, h3, h5, p {
@@ -66,7 +73,7 @@ h1, h2, h3, h5, p {
   /* The icons depending on the weather */
   .sun-rays {
     position: absolute;
-    bottom: 2em;
+    bottom: -20.5em;
     right: 18em;
     height: 15em;
     width: 15em;
@@ -80,7 +87,7 @@ h1, h2, h3, h5, p {
     }
     .sun {
     position: absolute;
-    bottom: 4.5em;
+    bottom: -18em;
     right: 20.5em;
     height: 10em;
     width: 10em;
