@@ -1,55 +1,78 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> -->
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Other CSS -->
-    <link rel="stylesheet" type="text/css" href="learn.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <!-- <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet"> -->
 
-    <!-- Title -->
-    <title>Weather Stalker</title>
-  </head>
-  <body>
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-12 mt-5">
-          <h1><span id="out"></span></h1>
-          <h1><span id="name"></span><span id="country"></span></h1>
-        
-          <h2 class="celcius"></h2>
+  <!-- Other CSS -->
+  <link rel="stylesheet" type="text/css" href="learn.css">
+
+  <!-- Title -->
+  <title>Weather Stalker</title>
+</head>
+
+<body>
+  <div class="container text-center">
+    <div class="row">
+      <div class="card bg-light mb-3" style="max-width: 18rem;">
+        <div class="card-header">
+          <h1>
+            <span id="name"></span>
+            <span id="country"></span>
+          </h1>
+        </div>
+        <div class="card-body">
+          <h2 class="celcius card-title"></h2>
+          <p class="mt-5 card-text">
+            <span id="desc"></span>
+          </p>
+          <div class="col-12 mt-5">
+            <h1>
+              <span id="out"></span>
+            </h1>
             <!-- Rectangular switch -->
             <label class="switch">
               <input type="checkbox">
               <span class="slider"></span>
             </label>
-
-          <h5 class="mt-5"><span id="desc"></span></h5>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-12">
-           <!--Section to display weather animations-->
-           <span class="sun-rays"></span>
-           <span class="sun"></span>
-           <div class="cloudy"></div>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!--Section to display weather animations-->
+  <div id="the-sun" class="container">
+    <span class="sun-rays"></span>
+    <span class="sun"></span>
+  </div>
 
-    <!-- External JavaScript -->
-    <script src="learn.js"></script>
-  </body>
+  <div id="clouds" class="container">
+    <div class="row">
+      <div class="cloudy x1"></div>
+      <div class="cloudy x2"></div>
+      <div class="cloudy x3"></div>
+      <div class="cloudy x4"></div>
+      <div class="cloudy x5"></div>
+    </div>
+  </div>
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <!-- External JavaScript -->
+  <script src="learn.js"></script>
+</body>
+
 </html>
-

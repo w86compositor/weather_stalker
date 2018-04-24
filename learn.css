@@ -1,16 +1,17 @@
 body {
-  background: linear-gradient(to bottom, #B9DFFF, #4BA0DB, #004390);
-  overflow: hidden;
-  display: grid;
-  top: 0;
-  left: 0;
-  min-height: 70em;
-  max-height: 70em;
-  width: 100%;
+    background: #c9dbe9;
+    overflow: hidden;
+    display: grid;
+    top: 0;
+    left: 0;
+    min-height: 70em;
+    max-height: 70em;
+    width: 100%;
 }
 
-h1, h2, h3, h5, p {
-    color: #f2f2f2;
+.card {
+    margin: 0 auto;
+    opacity: 0.88;
 }
 
 .switch {
@@ -20,9 +21,12 @@ h1, h2, h3, h5, p {
     height: 34px;
 }
 
-.switch input { display: none; }
+.switch input {
+    display: none;
+}
 
 /* The slider */
+
 .slider {
     position: absolute;
     cursor: pointer;
@@ -33,9 +37,9 @@ h1, h2, h3, h5, p {
     background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  .slider:before {
+}
+
+.slider:before {
     position: absolute;
     content: "";
     height: 26px;
@@ -45,109 +49,221 @@ h1, h2, h3, h5, p {
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  input:checked + .slider {
+}
+
+input:checked+.slider {
     background-color: #2196F3;
-  }
-  
-  input:focus + .slider {
+}
+
+input:focus+.slider {
     box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
+}
+
+input:checked+.slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
+}
 
-  /* The icons depending on the weather */
-  .sun-rays {
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* The icons depending on the weather */
+
+.sun-rays {
     position: absolute;
-    bottom: -20.5em;
-    right: 18em;
+    bottom: 24.5em;
+    right: 50em;
     height: 15em;
     width: 15em;
-    z-index: 999999;
+    z-index: -999999;
     background: radial-gradient(rgba(255, 237, 175, .8) 50%, rgba(255, 237, 175, .2) 70%);
     border-radius: 50%;
     box-shadow: 0 0 .5em rgba(255, 237, 175, 1);
     -webkit-animation: rays 10s infinite;
     -moz-animation: rays 10s infinite;
     animation: rays 10s infinite;
-    }
-    .sun {
+}
+
+.sun {
     position: absolute;
-    bottom: -18em;
-    right: 20.5em;
+    bottom: 27em;
+    right: 52.5em;
     height: 10em;
     width: 10em;
-    z-index: -5;
+    z-index: -99999;
     background: rgba(255, 237, 175, 1);
     border-radius: 50%;
     box-shadow: 0 0 1em rgba(255, 237, 175, .5), inset 0 0 .5em #FFFFAD;
-    }
+}
 
-    /*Sun Animation*/
+/*Sun Animation*/
+
 @-webkit-keyframes rays {
-  0% {
-      transform: scale(1.1);
-  }
-  25% {
-      transform: scale(0.9);
-  }
-  50% {
-      transform: scale(1.1);
-  }
-  75% {
-      transform: scale(0.9);
-  }
-  100% {
-      transform: scale(1.1);
-  }
+    0% {
+        transform: scale(1.1);
+    }
+    25% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    75% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1.1);
+    }
 }
 
 @-moz-keyframes rays {
-  0% {
-      transform: scale(1.1);
-  }
-  25% {
-      transform: scale(0.9);
-  }
-  50% {
-      transform: scale(1.1);
-  }
-  75% {
-      transform: scale(0.9);
-  }
-  100% {
-      transform: scale(1.1);
-  }
+    0% {
+        transform: scale(1.1);
+    }
+    25% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    75% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1.1);
+    }
 }
 
 @keyframes rays {
-  0% {
-      transform: scale(1.1);
-  }
-  25% {
-      transform: scale(0.9);
-  }
-  50% {
-      transform: scale(1.1);
-  }
-  75% {
-      transform: scale(0.9);
-  }
-  100% {
-      transform: scale(1.1);
-  }
+    0% {
+        transform: scale(1.1);
+    }
+    25% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    75% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* CLOUDY */
+
+.cloudy {
+    animation: moveclouds 15s linear infinite;
+    background: #808080;
+    border-radius: 50%;
+    box-shadow: #808080 65px -15px 0 -5px, #808080 25px -25px, #808080 30px 10px, #808080 60px 15px 0 -10px, #808080 85px 5px 0 -5px;
+    height: 50px;
+    width: 50px;
+    margin-left: -60px;
+    position: absolute;
+    left: 255px;
+    top: 70px;
+    z-index: -777777;
+}
+
+/*Time to animate*/
+
+.x1 {
+    -webkit-animation: moveclouds 150s linear infinite;
+    -moz-animation: moveclouds 150s linear infinite;
+    -o-animation: moveclouds 150s linear infinite;
+    left: -200px;
+    top: 150px;
+    transform: scale(1.6);
+}
+
+.x2 {
+    left: 20px;
+    top: 250px;
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 0.6;
+    /*opacity proportional to the size*/
+    /*Speed will also be proportional to the size and opacity*/
+    /*More the speed. Less the time in 's' = seconds*/
+    -webkit-animation: moveclouds 250s linear infinite;
+    -moz-animation: moveclouds 250s linear infinite;
+    -o-animation: moveclouds 250s linear infinite;
+}
+
+.x3 {
+    left: 450px;
+    top: 510px;
+    -webkit-transform: scale(10.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.8;
+    /*opacity proportional to the size*/
+    -webkit-animation: moveclouds 120s linear infinite;
+    -moz-animation: moveclouds 120s linear infinite;
+    -o-animation: moveclouds 120s linear infinite;
+}
+
+.x4 {
+    left: 170px;
+    top: 280px;
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    transform: scale(0.75);
+    opacity: 0.75;
+    /*opacity proportional to the size*/
+    -webkit-animation: moveclouds 318s linear infinite;
+    -moz-animation: moveclouds 318s linear infinite;
+    -o-animation: moveclouds 318s linear infinite;
+}
+
+.x5 {
+    left: 20px;
+    top: 180px;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.8;
+    /*opacity proportional to the size*/
+    -webkit-animation: moveclouds 220s linear infinite;
+    -moz-animation: moveclouds 220s linear infinite;
+    -o-animation: moveclouds 220s linear infinite;
+}
+
+@-webkit-keyframes moveclouds {
+    0% {
+        margin-left: 1000px;
+    }
+    100% {
+        margin-left: -1000px;
+    }
+}
+
+@-moz-keyframes moveclouds {
+    0% {
+        margin-left: 1000px;
+    }
+    100% {
+        margin-left: -1000px;
+    }
+}
+
+@-o-keyframes moveclouds {
+    0% {
+        margin-left: 1000px;
+    }
+    100% {
+        margin-left: -1000px;
+    }
 }
