@@ -107,8 +107,9 @@ $(document).ready(function () {
     } //closing bracket of success function
 
     function error() {
+      $(".card").show();
 	  let result = document.getElementById("out");
-      result.innerHTML = "Look if you don't hit the allow button, I can't give you the weather so reload the page and hit allow please";
+      result.innerHTML = "Reload the page and hit allow please";
     }
     //calling the navigator object
     navigator.geolocation.getCurrentPosition(success, error);
