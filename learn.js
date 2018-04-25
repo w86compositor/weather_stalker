@@ -8,7 +8,6 @@ $(document).ready(function () {
   function findMyLocation() {
     let tempCel = "C";
     let tempFah = "F";
-    let result = document.getElementById("out");
 
     if (!navigator.geolocation) {
       result.innerHTML = "Geolocation is not supported by your browser";
@@ -34,7 +33,7 @@ $(document).ready(function () {
 
           // Adding an event listener to toggle between celcius and fahrenheit
           $("span.slider").on("click", function () {
-            // Calculating celcius and fahrenheit...it's just Math dude
+            // Calculating celcius and fahrenheit...it's just Math
             let fahrenheit = Math.floor((resp.main.temp * 1.8) + 32);
             let celcius = Math.floor((fahrenheit - 32) / 1.8);
 
@@ -47,49 +46,57 @@ $(document).ready(function () {
               $("h2.celcius").html(celcius + String.fromCharCode(176) + tempCel);
             }
           });//closing event listener
-
-
-
           //check the weather description to display cool css animations
-          let checkWeatherDesc = $("span#desc").html();
+          let checkWeatherDesc =  resp.weather[0].description;    //$("span#desc").html();
           switch (checkWeatherDesc) {
             case "clear sky":
-              // hiding all css weather animations
+              // showing animations
+              console.log(checkWeatherDesc);
               $("#the-sun").show();
+              $(".card").show();
               break;
 
             case "few clouds":
-              // hiding all css weather animations
+              // showing animations
+              console.log(checkWeatherDesc);
               $("#the-sun").show();
               $("#clouds").show();
+	          $(".card").show();
               break;
 
             case "scattered clouds":
-              console.log("scatt clouds");
+              console.log(checkWeatherDesc);
+	            $(".card").show();
               break;
 
             case "broken clouds":
-              console.log("broken clouds");
+              console.log(checkWeatherDesc);
+	            $(".card").show();
               break;
 
             case "shower rain":
-              console.log("shower rain");
+              console.log(checkWeatherDesc);
+	            $(".card").show();
               break;
 
             case "rain":
-              console.log("it's pouring dude");
+              console.log(checkWeatherDesc);
+	            $(".card").show();
               break;
 
             case "thunderstorm":
-              console.log("it's going crazy");
+              console.log(checkWeatherDesc);
+	            $(".card").show();
               break;
 
             case "snow":
-              console.log("freezing it's snowing");
+              console.log(checkWeatherDesc);
+	            $(".card").show();
               break;
 
             case "mist":
-              console.log("mist mister");
+              console.log(checkWeatherDesc);
+	            $(".card").show();
               break;
           }
         }//closing xhttp if statement
@@ -100,9 +107,9 @@ $(document).ready(function () {
     } //closing bracket of success function
 
     function error() {
-      result.innerHTML = "How am I going to give you the weather if you deny the location??";
+	  let result = document.getElementById("out");
+      result.innerHTML = "Look if you don't hit the allow button, I can't give you the weather so reload the page and hit allow please";
     }
-
     //calling the navigator object
     navigator.geolocation.getCurrentPosition(success, error);
   } // closing function findMyLocation
