@@ -2,7 +2,12 @@ $(document).ready(function () {
   // hiding all css weather animations
   $("#the-sun").hide();
   $("#clouds").hide();
-  $(".card").hide();
+  $("#scattered-cloud").hide();
+  $("#rain").hide();
+  $("#thunderstorm").hide();
+  $("#snow").hide();
+  $("#mist").hide();
+;  $(".card").hide();
 
 
   function findMyLocation() {
@@ -47,7 +52,7 @@ $(document).ready(function () {
             }
           });//closing event listener
           //check the weather description to display cool css animations
-          let checkWeatherDesc =  resp.weather[0].description;    //$("span#desc").html();
+          let checkWeatherDesc =  "mist";//resp.weather[0].description;   
           switch (checkWeatherDesc) {
             case "clear sky":
               // showing animations
@@ -66,37 +71,44 @@ $(document).ready(function () {
 
             case "scattered clouds":
               console.log(checkWeatherDesc);
-	            $(".card").show();
+              $(".card").show();
+              $("#scattered-cloud").show();
               break;
 
             case "broken clouds":
               console.log(checkWeatherDesc);
-	            $(".card").show();
+              $(".card").show();
+              $("#scattered-cloud").show();
               break;
 
             case "shower rain":
               console.log(checkWeatherDesc);
-	            $(".card").show();
+              $(".card").show();
+              $("#rain").show();
               break;
 
             case "rain":
               console.log(checkWeatherDesc);
-	            $(".card").show();
+              $(".card").show();
+              $("#rain").show();
               break;
 
             case "thunderstorm":
               console.log(checkWeatherDesc);
-	            $(".card").show();
+              $(".card").show();
+              $("#thunderstorm").show();
               break;
 
             case "snow":
               console.log(checkWeatherDesc);
-	            $(".card").show();
+              $(".card").show();
+              $("#snow").show();
               break;
 
             case "mist":
               console.log(checkWeatherDesc);
-	            $(".card").show();
+              $(".card").show();
+              $("#mist").show();
               break;
           }
         }//closing xhttp if statement
