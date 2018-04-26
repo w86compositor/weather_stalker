@@ -1,5 +1,9 @@
 body {
     background: #c9dbe9;
+    background-repeat: no-repeat; /* you know... don't repeat... */
+    background-position: center center; /*center the background */
+    background-attachment: fixed; /*don't scroll with content */
+    background-size: cover;
     overflow: hidden;
     display: grid;
     top: 0;
@@ -7,10 +11,6 @@ body {
     min-height: 70em;
     max-height: 70em;
     width: 100%;
-}
-
-#mist {
-    background: url("https://images.unsplash.com/photo-1495733014470-54e8000f94c3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=309d1b63a5335ef23d17ca3572bc2705&auto=format&fit=crop&w=1050&q=80") center center no-repeat;
 }
 
 .card {
