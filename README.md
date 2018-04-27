@@ -11,4 +11,4 @@ You can find the link to this FreeCodeCamp [here](https://www.freecodecamp.org/c
 
 The technologies I used for this project are HTML, CSS and Javascript. Basically you need to get the location of the user from the browser using the HTML5 Geolocation Object then making a GET Request ( using AJAX) to the Open Weather API and parsing the returned data (JSON) to display useful information like location and country, temperature and weather description. Many other FCC campers went beyond and display also time and fancy animations. I sticked to the above user stories but I did different CSS animations with moving clouds depending on the weather description. I hope you will enjoy and take a look at my code if you need some tips :) 
 
-You can find a demo of my project [here]().
+You can find a demo of my project [no link yet]().
