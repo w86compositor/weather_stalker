@@ -119,6 +119,7 @@ $(document).ready(function () {
     } //closing bracket of success function
 
     function error() {
+      $(".switch").hide();
       $(".card").show();
 	  let result = document.getElementById("out");
       result.innerHTML = "Reload the page and hit allow please";
