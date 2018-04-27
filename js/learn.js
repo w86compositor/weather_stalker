@@ -55,14 +55,14 @@ $(document).ready(function () {
           let checkWeatherDesc = resp.weather[0].main;
           let weatherDesc = checkWeatherDesc.toLowerCase();
           switch (weatherDesc) {
-            case "clear sky":
+            case "clear":
               // showing animations
               console.log(weatherDesc);
               $("#the-sun").show();
               $(".card").show();
               break;
 
-            case "few clouds":
+            case "clouds":
               // showing animations
               console.log(weatherDesc);
               $("#the-sun").show();
@@ -70,19 +70,19 @@ $(document).ready(function () {
               $(".card").show();
               break;
 
-            case "scattered clouds":
+            case "clouds":
               console.log(weatherDesc);
               $(".card").show();
               $("#scattered-cloud").show();
               break;
 
-            case "broken clouds":
+            case "clouds":
               console.log(weatherDesc);
               $(".card").show();
               $("#scattered-cloud").show();
               break;
 
-            case "shower rain":
+            case "drizzle":
               console.log(weatherDesc);
               $(".card").show();
               $("#rain").show();
@@ -106,7 +106,7 @@ $(document).ready(function () {
               $("#snow").show();
               break;
 
-            case "mist":
+            case "atmosphere":
               console.log(weatherDesc);
               $(".card").show();
               document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1495733014470-54e8000f94c3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=309d1b63a5335ef23d17ca3572bc2705&auto=format&fit=crop&w=1050&q=80')";
