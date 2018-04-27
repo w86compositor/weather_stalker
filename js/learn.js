@@ -7,7 +7,7 @@ $(document).ready(function () {
   $("#thunderstorm").hide();
   $("#snow").hide();
   $("#mist").hide();
-;  $(".card").hide();
+  ; $(".card").hide();
 
 
   function findMyLocation() {
@@ -52,61 +52,62 @@ $(document).ready(function () {
             }
           });//closing event listener
           //check the weather description to display cool css animations
-          let checkWeatherDesc = resp.weather[0].description;   
-          switch (checkWeatherDesc) {
+          let checkWeatherDesc = resp.weather[0].main;
+          let weatherDesc = checkWeatherDesc.toLowerCase();
+          switch (weatherDesc) {
             case "clear sky":
               // showing animations
-              console.log(checkWeatherDesc);
+              console.log(weatherDesc);
               $("#the-sun").show();
               $(".card").show();
               break;
 
             case "few clouds":
               // showing animations
-              console.log(checkWeatherDesc);
+              console.log(weatherDesc);
               $("#the-sun").show();
               $("#clouds").show();
-	          $(".card").show();
+              $(".card").show();
               break;
 
             case "scattered clouds":
-              console.log(checkWeatherDesc);
+              console.log(weatherDesc);
               $(".card").show();
               $("#scattered-cloud").show();
               break;
 
             case "broken clouds":
-              console.log(checkWeatherDesc);
+              console.log(weatherDesc);
               $(".card").show();
               $("#scattered-cloud").show();
               break;
 
             case "shower rain":
-              console.log(checkWeatherDesc);
+              console.log(weatherDesc);
               $(".card").show();
               $("#rain").show();
               break;
 
             case "rain":
-              console.log(checkWeatherDesc);
+              console.log(weatherDesc);
               $(".card").show();
               $("#rain").show();
               break;
 
             case "thunderstorm":
-              console.log(checkWeatherDesc);
+              console.log(weatherDesc);
               $(".card").show();
               $("#thunderstorm").show();
               break;
 
             case "snow":
-              console.log(checkWeatherDesc);
+              console.log(weatherDesc);
               $(".card").show();
               $("#snow").show();
               break;
 
             case "mist":
-              console.log(checkWeatherDesc);
+              console.log(weatherDesc);
               $(".card").show();
               document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1495733014470-54e8000f94c3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=309d1b63a5335ef23d17ca3572bc2705&auto=format&fit=crop&w=1050&q=80')";
               break;
@@ -121,7 +122,7 @@ $(document).ready(function () {
     function error() {
       $(".switch").hide();
       $(".card").show();
-	  let result = document.getElementById("out");
+      let result = document.getElementById("out");
       result.innerHTML = "Reload the page and hit allow please";
     }
     //calling the navigator object
