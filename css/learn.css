@@ -16,6 +16,11 @@ body {
     width: 100%;
 }
 
+p {
+    color: red;
+    opacity: 0.8;
+}
+
 .card {
     margin: 0 auto;
     opacity: 0.88;
